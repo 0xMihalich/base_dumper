@@ -64,7 +64,7 @@ class BaseDumper(ABC):
         """Class initialization."""
 
         if not logger:
-            logger_name = self.__class__
+            logger_name = self.__class__.__name__
             version=__version__
             logger = DumperLogger(logger_name=logger_name, version=version)
 
