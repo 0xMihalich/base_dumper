@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "base_dumper"
+version = "0.0.0.1"
+description = "Abstract class and base common modules for dbhose-airflow dumpers."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+authors = [
+    {name = "0xMihalich", email = "bayanmobile87@gmail.com"},
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+]
+dependencies = [
+    "light-compressor==0.0.2.2",
+    "sqlparse==0.5.4",
+    "pandas",
+    "polars",
+]
+
+[project.urls]
+Homepage = "https://github.com/0xMihalich/base_dumper"
+Documentation = "https://0xmihalich.github.io/dbhose_airflow/classes/base_dumper/index.html"
+Repository = "https://github.com/0xMihalich/base_dumper"
+Changelog = "https://github.com/0xMihalich/base_dumper/blob/main/CHANGELOG.md"
+
+[tool.setuptools]
+packages = {find = {where = ["src"]}}
+package-dir = {"" = "src"}
